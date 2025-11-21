@@ -127,6 +127,11 @@ text-decoration: underline;}
 cursor:pointer;
 text-decoration: underline;}
 
+.about-link {
+    text-decoration: none;
+    color: inherit;
+}
+
 .box{
 height:400px;
 position: relative;
