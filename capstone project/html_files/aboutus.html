@@ -14,9 +14,12 @@
     </div>
 
     <div class="nav-search">
-        <input type="text" placeholder="Search for products, brands and more...">
+        <input type="text" placeholder="Search for products, brands and more..." class="search-bar">
         <span class="search-icon">🔍</span>
     </div>
+
+
+
     <a href="/html_files/login.html">
     <div class="nav-right">
         <button class="nav-btn1">
@@ -27,6 +30,7 @@
             <span class="icon">🛒</span>
         </button></a>
     </div>
+    <button id="darkModeToggle" class="nav-btn1">🌙 Dark Mode</button>
 </nav>
 <nav class="navbar1">
   <a href="/html_files/index.html" class="home-link">
@@ -35,7 +39,7 @@
     </div>
     </a>
     <a href="/html_files/products.html" class="products-link">
-    <div class="products">
+    <div class="nav-products">
         <p>Products</p>
     </div>
     </a>
@@ -171,6 +175,20 @@
 
     <p class="footer-bottom">© 2024 DailyHaven. All rights reserved.</p>
 </footer>
+<script>
+const toggleBtn = document.getElementById("darkModeToggle");
+
+toggleBtn.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+
+    
+    if (document.body.classList.contains("dark-mode")) {
+        toggleBtn.textContent = "☀️ Light Mode";
+    } else {
+        toggleBtn.textContent = "🌙 Dark Mode";
+    }
+});
+</script>
 
 
 

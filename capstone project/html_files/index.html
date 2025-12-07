@@ -13,7 +13,7 @@
     </div>
 
     <div class="nav-search">
-        <input type="text" placeholder="Search for products, brands and more...">
+        <input type="text" placeholder="Search for products, brands and more..." class="search-bar">
         <span class="search-icon">🔍</span>
     </div>
     
@@ -27,6 +27,8 @@
         <button class="nav-btn2">
             <span class="icon">🛒</span>
         </button></a>
+        <button id="themeBtn" class="nav-btn1" onclick="changeClass()">🌙 Dark Mode</button>
+
     </div>
 </nav>
 <nav class="navbar1">
@@ -36,7 +38,7 @@
     </div>
     </a>
     <a href="/html_files/products.html" class="products-link">
-    <div class="products">
+    <div class="nav-products">
         <p>Products</p>
     </div>
     </a>
@@ -132,7 +134,7 @@
 
 <div class="home-wrapper">
 
-  <!-- Trending Products -->
+  
   <section class="product-section">
     <div class="section-header">
       <h2>Trending Products</h2>
@@ -142,7 +144,7 @@
 
     <div class="product-grid">
 
-      <!-- CARD -->
+      
       <div class="product-card">
         <span class="tag">50% OFF</span>
         <img src="/images/image copy 3.png" />
@@ -195,7 +197,7 @@
   </section>
 
 
-  <!-- Popular Deals -->
+  
   <section class="product-section">
     <div class="section-header">
       <h2>Popular Deals</h2>
@@ -307,12 +309,41 @@
 
     <p class="footer-bottom">© 2024 DailyHaven. All rights reserved.</p>
 </footer>
+<div class="alert-overlay" id="alertBox">
+    <div class="alert-box">
+        <h3>Welcome!</h3>
+        <p>Welcome to DailyHaven — Your trusted shopping destination!</p>
+        <button class="alert-btn" onclick="closeAlert()">Okay</button>
+    </div>
+</div>
 <script>
-  alert("Welcome to DailyHeaven!")
+window.onload = function() {
+    document.getElementById("alertBox").style.display = "flex";
+};
 
+function closeAlert() {
+    document.getElementById("alertBox").style.display = "none";
+}
+
+const themeBtn = document.getElementById("themeBtn");
+
+themeBtn.addEventListener("click", () => {
+  const body = document.body;
+
+  body.classList.toggle("dark");
+
+  if (body.classList.contains("dark")) {
+    themeBtn.innerText = "☀️ Light Mode";
+  } else {
+    themeBtn.innerText = "🌙 Dark Mode";
+  }
+});
+
+
+</script>
 
 
 
 </script>
 </body>
-
+</html>

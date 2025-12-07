@@ -261,12 +261,13 @@ body {
     margin-bottom: 15px;
     font-size: 20px;
     font-weight: 700;
+    
     background: linear-gradient(to right,
     #FF6A00,
     #6A5ACD,
     #1E90FF
 );
-    -webkit-background-clip: text;
+   -webkit-background-clip: text;
     color: transparent;
 }
 
@@ -322,8 +323,6 @@ footer hr {
 }
 
 
-
-/* Responsive */
 @media(max-width: 900px) {
     .values-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -335,14 +334,10 @@ footer hr {
         grid-template-columns: 1fr;
     }
 }
-/* ===================================================================
-   RESPONSIVENESS FOR NAVBAR + ABOUT PAGE
-   =================================================================== */
 
-/* Tablet breakpoint */
 @media (max-width: 900px) {
 
-    /* ABOUT PAGE adjustments */
+    
     .story-section,
     .mission-section {
         padding: 0 15px;
@@ -361,12 +356,9 @@ footer hr {
     }
 }
 
-/* Mobile breakpoint */
+
 @media (max-width: 768px) {
 
-    /* -------------------------
-       HIDE NAVBAR ON MOBILE
-       ------------------------- */
     .nav-search,
     .nav-right,
     .navbar1 {
@@ -383,9 +375,6 @@ footer hr {
         text-align: center;
     }
 
-    /* -------------------------
-       ABOUT PAGE layout fixes
-       ------------------------- */
     .story-section,
     .mission-section {
         margin: 35px auto;
@@ -429,7 +418,6 @@ footer hr {
     }
 }
 
-/* Very small screens */
 @media (max-width: 480px) {
 
     .logo {
@@ -447,4 +435,76 @@ footer hr {
     .value-card h3 {
         font-size: 16px;
     }
+}
+
+.dark-mode {
+    background: #121212;
+    color: #ffffff;
+}
+
+.dark-mode .navbar {
+    background: #1e1e1e;
+    box-shadow: 0 1px 5px rgba(255,255,255,0.08);
+}
+
+.dark-mode .nav-btn1,
+.dark-mode .nav-btn2 {
+    background: #222;
+    border-color: #444;
+    color: white;
+}
+
+.dark-mode .nav-btn1:hover {
+    background: #333;
+}
+
+.dark-mode .nav-btn2:hover {
+    background: #444;
+}
+
+.dark-mode .navbar1 div p {
+    color: white;
+}
+
+.dark-mode .about-hero {
+    background: linear-gradient(90deg, #333, #222);
+}
+
+.dark-mode .story-section,
+.dark-mode .mission-section {
+    color: #eaeaea;
+}
+
+.dark-mode .values-section {
+    background: #1b1b1b;
+    color: white;
+}
+
+.dark-mode .value-card {
+    background: #2a2a2a;
+    color: white;
+    box-shadow: none;
+}
+
+.dark-mode .footer {
+    background: #1b1b1b;
+    color: #cccccc;
+}
+
+.dark-mode .footer-section ul li a {
+    color: #cccccc;
+}
+
+.dark-mode .footer-section ul li a:hover {
+    color: #ff7b3e;
+}
+
+.dark-mode hr {
+    background: #333;
+}
+.dark-mode .search-bar{
+    background-color: black;
+}
+#darkModeToggle{
+    margin-left: 10px;
 }

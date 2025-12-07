@@ -100,14 +100,14 @@
             const password = document.getElementById("password").value.trim();
             const errorBox = document.getElementById("errorBox");
 
-            // Basic email check
+            
             if (!email.includes("@") || email.length < 5) {
                 errorBox.style.display = "block";
                 errorBox.innerText = "Email must contain '@' and be valid.";
                 return;
             }
 
-            // Simple password check
+            
             if (password.length < 6) {
                 errorBox.style.display = "block";
                 errorBox.innerText = "Password must be at least 6 characters.";
