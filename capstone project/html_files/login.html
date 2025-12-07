@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f5f7fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .login-container {
+            width: 350px;
+            padding: 25px;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .login-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        label {
+            font-size: 14px;
+            color: #333;
+            font-weight: 600;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0 15px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            outline: none;
+            font-size: 14px;
+        }
+
+        input:focus {
+            border-color: #007bff;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 10px;
+            background: #007bff;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #005fcc;
+        }
+
+        .error {
+            color: red;
+            font-size: 13px;
+            margin-bottom: 10px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-container">
+        <h2>Login</h2>
+
+        <div id="errorBox" class="error">Please fill the details correctly.</div>
+
+        <label>Email</label>
+        <input type="text" id="email" placeholder="Enter your email" />
+
+        <label>Password</label>
+        <input type="password" id="password" placeholder="Enter password" />
+
+        <button class="btn" onclick="validateLogin()">Login</button>
+    </div>
+
+    <script>
+        function validateLogin() {
+            const email = document.getElementById("email").value.trim();
+            const password = document.getElementById("password").value.trim();
+            const errorBox = document.getElementById("errorBox");
+
+            // Basic email check
+            if (!email.includes("@") || email.length < 5) {
+                errorBox.style.display = "block";
+                errorBox.innerText = "Email must contain '@' and be valid.";
+                return;
+            }
+
+            // Simple password check
+            if (password.length < 6) {
+                errorBox.style.display = "block";
+                errorBox.innerText = "Password must be at least 6 characters.";
+                return;
+            }
+
+            errorBox.style.display = "none";
+            alert("Login successful!");
+        }
+    </script>
+
+</body>
+</html>
